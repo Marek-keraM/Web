@@ -1,0 +1,578 @@
+:root {
+  --clr-primary: rgb(85, 84, 66);
+
+  --clr-accent-white: rgb(255, 255, 255);
+  --clr-accent-black: rgb(0, 0, 0);
+
+  --fw-thin: 100;
+  --fw-extra-light: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-primary-100: 0.875rem;
+  --fs-primary-200: 1rem;
+  --fs-primary-300: 1.125rem;
+  --fs-primary-400: 1.25rem;
+  --fs-primary-500: 1.5rem;
+  --fs-primary-600: 2rem;
+  --fs-primary-700: 2.25rem;
+  --fs-primary-800: 2.5rem;
+  --fs-primary-900: 3.5rem;
+
+  --fs-secondary-100: 0.75rem;
+  --fs-secondary-200: 0.875rem;
+  --fs-secondary-300: 0.9375rem;
+  --fs-secondary-400: 1rem;
+  --fs-secondary-500: 1.25rem;
+  --fs-secondary-600: 1.5rem;
+  --fs-secondary-700: 1.75rem;
+  --fs-secondary-800: 2rem;
+  --fs-secondary-900: 2.5rem;
+  /*   Padding and Margin */
+
+  --size-100: 0.25rem;
+  --size-200: 0.5rem;
+  --size-300: 0.75rem;
+  --size-400: 1rem;
+  --size-500: 1.5rem;
+  --size-600: 2rem;
+  --size-700: 3rem;
+  --size-800: 4rem;
+  --size-900: 5rem;
+}
+::marker {
+  content: "";
+}
+::-webkit-scrollbar {
+  background-color: var(--clr-primary);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-accent-white);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  min-width: 360px;
+  height: 100%;
+  background-color: var(--clr-primary);
+}
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*
+*/
+header {
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
+  background-image: url(/Sofa-Shop/img/pexels-photo-6758512.webp);
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+button {
+  width: max-content;
+  height: max-content;
+  padding: 0.75em 2em;
+  background-color: var(--clr-primary);
+  outline: none;
+  border: none;
+  color: var(--clr-accent-white);
+}
+.header-grid {
+  display: grid;
+  grid-template:
+    "a a a a" 2em
+    "b b b b" 6em
+    "c c c c" 1fr
+    "d d d d" auto
+    "e e e e" 1fr;
+}
+.haeder-nav {
+  grid-area: b;
+  background-color: var(--clr-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--clr-accent-white);
+  font-family: "Rajdhani", sans-serif;
+  font-size: var(--fs-primary-400);
+}
+.haeder-nav ul {
+  display: inline-flex;
+}
+.nav-a {
+  color: var(--clr-accent-white);
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+.header-text-container {
+  grid-area: d;
+  color: var(--clr-accent-white);
+  font-family: "Rajdhani", sans-serif;
+}
+.header-text-container :not(button) {
+  color: var(--clr-accent-black);
+}
+.header-text-container h1 {
+  font-size: calc(var(--fs-primary-900) * 1.25);
+}
+.header-text-container p {
+  font-weight: var(--fw-medium);
+}
+.header-text-container > * {
+  margin-block: 0.5em;
+}
+main {
+  width: 100%;
+  min-height: 800px;
+}
+.first-setion {
+  display: grid;
+  background-color: var(--clr-accent-white);
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 800px;
+  row-gap: 1em;
+  column-gap: 0.5em;
+  grid-template-columns: 1fr 75px 75px 1fr;
+  grid-template-rows: 6em 1fr;
+}
+.first-img-sec {
+  grid-column: 2/4;
+  position: relative;
+}
+.section-img-absolut {
+  position: absolute;
+  display: inline-flex;
+  bottom: 0;
+  left: calc(-100% - 1.5em);
+}
+.menu-burger {
+  display: none;
+}
+.shop-list {
+  display: block;
+}
+.img-circle {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  display: inline-flex;
+  border-radius: 50%;
+  margin-inline: 0.5em;
+}
+.first {
+  background-image: url(/Sofa-Shop/img/pexels-photo-1571470.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.second {
+  background-image: url(/Sofa-Shop/img/pexels-photo-1648776.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.third {
+  background-image: url(/Sofa-Shop/img/pexels-photo-275484.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.first,
+.second,
+.third {
+  overflow: hidden;
+}
+.first::after,
+.second::after,
+.third::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: transform 600ms ease;
+}
+.first:hover.first::after,
+.second:hover.second::after,
+.third:hover.third::after {
+  transform: translateY(100%) translateX(100%);
+  transition: transform 600ms ease;
+}
+.first-sec-product {
+  grid-column: 1/3;
+  padding: 2em 8em 2em 0;
+  width: 100%;
+  height: 100%;
+}
+.product-sec {
+  width: 100%;
+  min-width: 200px;
+  height: 100%;
+  background-color: var(--clr-primary);
+  width: min(500px, 100% - 4rem);
+  margin-right: 0;
+  margin-left: auto;
+  position: relative;
+}
+.product-sec-img {
+  width: min(500px, 100% - 1rem);
+  min-width: 250px;
+  height: 500px;
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  transform: translate(8rem, 50%);
+  background-image: url(/Sofa-Shop/img/pexels-photo-1571470.jpeg);
+  background-position: right center;
+  background-size: cover;
+}
+.first-sec-slide {
+  grid-column: 3/5;
+  padding: 2em 0 2em 1em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "Rajdhani", sans-serif;
+}
+.first-sec-slide h1 {
+  font-weight: 900;
+  font-size: var(--fs-primary-500);
+}
+.first-sec-slide p {
+  max-width: 550px;
+}
+.first-sec-slider {
+  width: 100%;
+  min-height: 16em;
+  height: auto;
+  display: inline-flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+.first-sec-slider::-webkit-scrollbar {
+  background-color: var(--clr-accent-white);
+  height: 2px;
+}
+.first-sec-slider::-webkit-scrollbar-thumb {
+  background-color: var(--clr-primary);
+}
+.slider1,
+.slider2,
+.slider3,
+.slider4 {
+  min-width: 200px;
+  height: 100%;
+  scroll-snap-align: start;
+}
+.slider1 {
+  background-color: rgb(85, 84, 66);
+}
+.slider2,
+.slider3,
+.slider4 {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.second-section-about {
+  width: 100%;
+  min-height: 6em;
+  display: flex;
+}
+.about-sec-1,
+.about-sec-2,
+.about-sec-3 {
+  flex: 1;
+  min-width: 350px;
+  background-position: bottom center;
+  background-size: cover;
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  font-family: "Rajdhani", sans-serif;
+}
+.about-sec-1::after,
+.about-sec-2::after,
+.about-sec-3::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+.about-sec-1 {
+  background-image: url(/Sofa-Shop/img/pexels-photo-275484.jpeg);
+}
+.about-sec-2 {
+  background-image: url(/Sofa-Shop/img/pexels-photo-6758512.webp);
+}
+.about-sec-3 {
+  background-image: url(/Sofa-Shop/img/pexels-photo-8581013.webp);
+}
+.about-1,
+.about-2,
+.about-3 {
+  color: var(--clr-accent-white);
+  z-index: 2;
+  text-align: right;
+  height: 100%;
+  padding: 6em 4em 6em 1em;
+}
+.about-1 > *,
+.about-2 > *,
+.about-3 > * {
+  margin-block: 0.5em;
+}
+.about-1 h1,
+.about-2 h1,
+.about-3 h1 {
+  font-size: var(--fs-primary-500);
+}
+.section-third-product {
+  width: 100%;
+  height: auto;
+  min-height: 800px;
+  padding-bottom: 4em;
+  background-color: var(--clr-accent-white);
+}
+.project-our-sec {
+  width: 100%;
+  max-width: 730px;
+  padding: 4em 0;
+  margin-inline: auto;
+  font-family: "Rajdhani", sans-serif;
+}
+.project-our-sec h1 {
+  font-size: var(--fs-primary-700);
+  font-weight: 900;
+  margin-bottom: 0.75em;
+}
+.project-our-sec p {
+  width: 60%;
+}
+.project-wrapper-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
+}
+.flex-wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 175px);
+  grid-template-rows: repeat(4, 175px);
+  gap: 1em;
+  margin: 1em;
+}
+.wrap-grid-1,
+.wrap-grid-2,
+.wrap-grid-3,
+.wrap-grid-4,
+.wrap-grid-1-1,
+.wrap-grid-2-2,
+.wrap-grid-3-3,
+.wrap-grid-4-4 {
+  background-position: center;
+  background-size: cover;
+}
+.wrap-grid-1 {
+  background-image: url(/Sofa-Shop/img/pexels-photo-6758512.webp);
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.wrap-grid-2 {
+  background-image: url(/Sofa-Shop/img/pexels-photo-275484.jpeg);
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.wrap-grid-3 {
+  background-image: url(/Sofa-Shop/img/pexels-photo-1648776.jpeg);
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.wrap-grid-4 {
+  background-image: url(/Sofa-Shop/img/pexels-photo-8581013.webp);
+  grid-column: 1/3;
+  grid-row: 4/5;
+  background-position: bottom;
+}
+.wrap-grid-1-1 {
+  background-image: url(/Sofa-Shop/img/pexels-photo-6758512.webp);
+  grid-column: 1/2;
+}
+.wrap-grid-2-2 {
+  background-image: url(/Sofa-Shop/img/pexels-photo-275484.jpeg);
+  grid-column: 2/3;
+}
+.wrap-grid-3-3 {
+  background-image: url(/Sofa-Shop/img/pexels-photo-1648776.jpeg);
+  grid-column: 1/3;
+}
+.wrap-grid-4-4 {
+  background-image: url(/Sofa-Shop/img/pexels-photo-8581013.webp);
+  grid-column: 1/3;
+  grid-row: 3/5;
+}
+footer {
+  width: 100%;
+  min-height: 18em;
+  display: inline-flex;
+  align-items: center;
+}
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  color: var(--clr-accent-white);
+  font-family: "Rajdhani", sans-serif;
+}
+.footer-content {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  padding: 2em 0;
+}
+.footer-content h1 {
+  font-size: var(--fs-primary-600);
+}
+.footer-content svg {
+  margin-bottom: 0.2em;
+}
+.footer-content p {
+  width: 80%;
+}
+/*
+*/
+@media (max-width: 50em) {
+  .haeder-nav ul li {
+    display: none;
+  }
+  .menu-burger {
+    display: block;
+  }
+  .shop-list {
+    display: none;
+  }
+}
+@media (max-width: 1050px) {
+  .second-section-about {
+    flex-direction: column;
+  }
+  .about-1 p,
+  .about-2 p,
+  .about-3 p {
+    width: 80%;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+@media (max-width: 650px) {
+  .first-setion {
+    min-height: 1400px;
+    grid-template-rows: 6em 1fr 1fr;
+  }
+  .first-sec-product {
+    grid-row: 2/3;
+  }
+  .first-sec-slide {
+    grid-column: 1/5;
+    grid-row: 3/4;
+  }
+}
+@media (max-width: 35em) {
+  .header-nav {
+    justify-content: space-between;
+  }
+  .section-img-absolut {
+    left: calc(0% - 0.2em);
+  }
+  .second,
+  .third {
+    display: none;
+  }
+  .first-setion {
+    min-height: 1400px;
+    grid-template-rows: 6em 1fr 1fr;
+  }
+  .first-sec-product {
+    grid-row: 2/3;
+  }
+  .first-sec-slide {
+    grid-column: 1/5;
+    grid-row: 3/4;
+  }
+}
+/*
+*/
+.container {
+  --padding: 4rem;
+  width: min(1200px, 100% - var(--padding));
+  margin-inline: auto;
+  height: 100%;
+}
+.aspect-rating {
+  width: 100%;
+  aspect-ratio: 1;
+}
+.centering {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
