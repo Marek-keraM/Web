@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&family=Lobster&display=swap");
+:root {
+  --clr-neutral-1: #bdcec8;
+  --clr-neutral-2: rgb(254, 254, 254);
+  --clr-neutral-3: rgb(231, 141, 160);
+  --clr-neutral-4: #f8eaed;
+  /*#F8EAED*/
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.5;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html {
+  behavior: smooth;
+}
+body {
+  width: 100%;
+  min-width: 380px;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--clr-neutral-3);
+}
+#nav {
+  z-index: 100;
+}
+nav {
+  width: 100%;
+  height: 5rem;
+  display: inline-flex;
+  background-color: var(--clr-neutral-3);
+  overflow: hidden;
+}
+nav div {
+  flex: 4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: start;
+  animation: starterUpNav 1.5s ease-in-out 100ms;
+}
+nav div p {
+  margin-left: 3rem;
+  font-size: 2.5rem;
+  color: var(--clr-neutral-2);
+}
+nav ul {
+  flex: 5;
+  margin-right: 4rem;
+  animation: starterUpNav 1.5s ease-in-out 100ms;
+}
+nav li {
+  padding: 0.25rem 3rem;
+  font-size: 1.75rem;
+  font-family: "Hind Madurai", sans-serif;
+}
+nav li:not(:last-of-type) {
+  border-right: 2px solid white;
+}
+.page-one {
+  width: 100%;
+  min-height: 40em;
+  height: 100vh;
+  background-color: var(--clr-neutral-2);
+  margin-top: -5rem;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+.first-svg {
+  position: absolute;
+  bottom: -16rem;
+  left: -14rem;
+  width: 1000px;
+  height: 1000px;
+}
+.second-svg {
+  position: absolute;
+  bottom: -22rem;
+  left: 5rem;
+  width: 1000px;
+  height: 1000px;
+}
+.third-page {
+  position: absolute;
+  bottom: -22rem;
+  left: 14rem;
+  width: 1000px;
+  height: 1000px;
+}
+.page-one-img {
+  position: absolute;
+  bottom: -3rem;
+  left: -5rem;
+}
+.page-one aside {
+  width: 300px;
+  position: absolute;
+  right: 20%;
+  top: 70%;
+  transform: translate(-20%, -70%);
+  height: auto;
+  min-height: 350px;
+}
+.page-one aside h1 {
+  font-size: 8rem;
+  line-height: 0.8;
+  color: var(--clr-neutral-3);
+  font-family: "Lobster", cursive;
+  font-weight: lighter;
+  /*animation: starterUp 1s ease-in-out 0ms;*/
+  opacity: 0;
+  transform: translateY(18px);
+  transition: transform 800ms 50ms ease-in-out, opacity 1s 0.25s ease-in-out;
+  will-change: transform, opacity;
+}
+.page-one aside h3 {
+  font-size: 3rem;
+  line-height: 2;
+  color: #9e9e9e;
+  font-family: "Hind Madurai", sans-serif;
+  font-weight: lighter;
+  /*animation: starterUp 1.25s ease-in-out 100ms;*/
+  opacity: 0;
+  transform: translateY(15px);
+  transition: transform 800ms 150ms ease-in-out, opacity 1s 0.25s ease-in-out;
+  will-change: transform, opacity;
+}
+.page-one aside p {
+  font-size: 1.25rem;
+  font-family: "Hind Madurai", sans-serif;
+  /*animation: starterUp 1.45s ease-in-out 200ms;*/
+  opacity: 0;
+  transform: translateY(12px);
+  transition: transform 800ms 250ms ease-in-out, opacity 1s 0.25s ease-in-out;
+  will-change: transform, opacity;
+}
+aside button {
+  margin-block: 2.5rem;
+  padding: 0.25rem 2.25rem;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  font-family: "Hind Madurai", sans-serif;
+  border-radius: 3px;
+  background-color: var(--clr-neutral-3);
+  /*animation: starterUp 1.45s ease-in-out 200ms;*/
+  opacity: 0;
+  transform: translateY(10px);
+  transition: transform 800ms 350ms ease-in-out, opacity 1s 0.25s ease-in-out;
+  will-change: transform, opacity;
+}
+.page-two {
+  width: 100%;
+  min-height: 45em;
+  max-height: 120em;
+  height: auto;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-items: center;
+  clip-path: polygon(100% 100px, 0 0, 0 100%, 100% 100%);
+}
+.page-two_padd {
+  width: 80%;
+  margin-inline: 10%;
+  height: auto;
+  max-height: 120em;
+  min-height: 30em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.wrapper-page-two {
+  width: 300px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 4rem 3rem;
+}
+.wrapper-page-two img {
+  width: 200px;
+  /*animation: starterUp 1.25s ease-in-out 100ms;*/
+  opacity: 0;
+  transform: translateY(12px);
+  transition: transform 700ms 250ms ease-in-out, opacity 1s 0.25s ease-in-out;
+  will-change: transform, opacity;
+}
+.wrapper-page-two h2 {
+  font-size: 3.5rem;
+  font-family: "Lobster", cursive;
+  color: var(--clr-neutral-3);
+  font-weight: lighter;
+  /*animation: starterUp 1.25s ease-in-out 300ms;*/
+  opacity: 0;
+  transform: translateY(12px);
+  transition: transform 700ms 250ms ease-in-out, opacity 1s 0.25s ease-in-out;
+  will-change: transform, opacity;
+}
+.wrapper-page-two:nth-child(2) h2 {
+  color: #bdcec8;
+}
+.wrapper-page-two p {
+  width: 80%;
+  /*animation: starterUp 1.45s ease-in-out 200ms;*/
+  opacity: 0;
+  transform: translateY(12px);
+  transition: transform 700ms 250ms ease-in-out, opacity 1s 0.25s ease-in-out;
+  will-change: transform, opacity;
+}
+.wrapper-btn {
+  font-size: 1.5rem;
+  padding: 0.125rem 2rem;
+  border: none;
+  background-color: var(--clr-neutral-3);
+  color: white;
+  margin-block: 2rem;
+  /*animation: starterUp 1.5s ease-in-out 200ms;*/
+  opacity: 0;
+  transform: translateY(12px);
+  transition: transform 700ms 250ms ease-in-out, opacity 1s 0.25s ease-in-out;
+  will-change: transform, opacity;
+}
+.page-third {
+  width: 100%;
+  min-height: 45em;
+  max-height: 120em;
+  height: auto;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.page-third-svg_f {
+  position: absolute;
+  bottom: -24rem;
+  left: -13rem;
+  width: 1100px;
+  height: 1100px;
+  z-index: 5;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+.page3_img {
+  position: absolute;
+  width: 700px;
+  height: 650px;
+  bottom: 2.5em;
+  left: 10%;
+  z-index: 6;
+  border-radius: 800px 160% 110% 130%;
+  background: url(/Cream-shop/pexels-charlotte-may-5947107.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: starterUp 1.5s ease-in-out 100ms;
+}
+.aside-content_page3 {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+  width: 100%;
+  min-width: 280px;
+  max-width: 350px;
+  height: auto;
+  min-height: 350px;
+  z-index: 7;
+}
+.aside-content_page3 h1 {
+  font-size: 6rem;
+  font-family: "Lobster", cursive;
+  color: var(--clr-neutral-3);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: transform 800ms 150ms ease-in-out, opacity 1s 0.25s ease-in-out;
+  will-change: transform, opacity;
+}
+.aside-content_page3 h3 {
+  font-size: 1.5rem;
+  color: #9e9e9e;
+  font-family: "Hind Madurai", sans-serif;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: transform 800ms 150ms ease-in-out, opacity 1s 0.25s ease-in-out;
+  will-change: transform, opacity;
+}
+.aside-content_page3 p {
+  padding-block: 1.5rem;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: transform 800ms 150ms ease-in-out, opacity 1s 0.25s ease-in-out;
+  will-change: transform, opacity;
+}
+.four-page {
+  width: 100%;
+  min-height: 45em;
+  height: auto;
+  background-color: white;
+  position: relative;
+  z-index: 3;
+}
+.four-page_padd {
+  padding: 10rem 10% 5rem 10%;
+  width: 100%;
+  min-height: 45em;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.four-page_padd h1 {
+  font-size: 4rem;
+  width: 100%;
+  margin-top: 3.5rem;
+  font-weight: lighter;
+  font-family: "Lobster", cursive;
+  color: var(--clr-neutral-3);
+}
+.grid_template {
+  min-height: 60em;
+  height: 100%;
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 4rem;
+  /*grid-template-columns: repeat(3, minmax(auto, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1rem 2.5rem;*/
+}
+.wrapper-container {
+  width: 350px;
+  height: 100%;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 1rem 32px;
+}
+.wrapper-container h2 {
+  padding: 1rem 0;
+  font-size: 1.75rem;
+  font-family: "Hind Madurai", sans-serif;
+  color: #9e9e9e;
+  font-weight: lighter;
+}
+.wrapper-container .wrapper-btn {
+  opacity: 1;
+  margin: -12px 0 0 0;
+}
+.img-container {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.img-container img {
+  height: 100%;
+  border-radius: 20px;
+}
+.ending-page {
+  width: 100%;
+  min-width: 380px;
+  height: 100%;
+  min-height: 35em;
+}
+footer {
+  width: 100%;
+  padding: 0 2rem;
+  height: 100%;
+}
+.title-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 0 0 0;
+}
+.title-footer h2,
+.title-footer p {
+  width: max-content;
+  color: white;
+}
+.title-footer h2 {
+  font-size: 3rem;
+  margin-bottom: -14px;
+  font-family: "Lobster", cursive;
+}
+.title-footer p {
+  font-size: 3rem;
+  letter-spacing: 2.5px;
+  font-weight: lighter;
+  font-family: "Hind Madurai", sans-serif;
+}
+.footer_main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1.5rem 0 4rem;
+}
+.main-links,
+.main-contact {
+  width: 100%;
+  min-width: 300px;
+  max-width: 350px;
+}
+.main-links h3,
+.main-contact h3,
+.main-medias h3 {
+  font-size: 2.5rem;
+  color: white;
+  font-family: "Lobster", cursive;
+  letter-spacing: 3px;
+  padding: 0.5rem;
+}
+.main-links ul,
+.main-contact ul,
+.main-medias ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+}
+.main-links li,
+.main-contact li {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  font-family: "Hind Madurai", sans-serif;
+}
+/*
+ANIMACIA NA JAVSCRIPT
+*/
+.js_scrolling {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: 700ms ease-in-out;
+}
+.js_scrolling.scrolled {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.page-one aside h1.is-visible,
+.page-one aside h3.is-visible,
+.page-one aside p.is-visible,
+aside button.is-visible {
+  opacity: 1;
+  transform: translateY(-32px);
+}
+.wrapper-page-two img.is-visible,
+.wrapper-page-two h2.is-visible,
+.wrapper-page-two p.is-visible,
+.wrapper-btn.is-visible {
+  opacity: 1;
+  transform: translateY(-26px);
+}
+.aside-content_page3 h1.is-visible,
+.aside-content_page3 h3.is-visible,
+.aside-content_page3 p.is-visible,
+.aside-content_page3 .wrapper-btn.is-visible {
+  opacity: 1;
+  transform: translateX(-26px);
+}
+/*
+  ANIMAVIA
+*/
+@keyframes starterUp {
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes starterUpNav {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/**
+MEDIA QUERRY SECTION
+*/
+@media screen and (max-width: 800px) {
+  .page-one aside h1 {
+    font-size: 6.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .page-one aside {
+    right: 10%;
+    transform: translate(-10%, -70%);
+  }
+  .page-one aside h1 {
+    font-size: 5.5rem;
+  }
+  .aside-content_page3 {
+    right: -10%;
+    transform: translate(-10%, -70%);
+  }
+}
