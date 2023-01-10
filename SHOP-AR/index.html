@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <title>AR-SHOP</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav_section">
+        <div class="nav_setion-title">
+          <svg
+            class="css-ze2te4 css-qd6ojx"
+            viewBox="0 0 39.616100681362134 12.898267626628893"
+          >
+            <g
+              transform="translate(-3.224568663906732, -16.58348694852286) scale(0.46065241523674616)"
+              stroke="#ff9f68"
+              fill="#ff9f68"
+            >
+              <g
+                xmlns="http://www.w3.org/2000/svg"
+                transform="translate(0,-952.36218)"
+              >
+                <path
+                  style="color: ; enable-background: accumulate"
+                  d="m 7.000009,1016.3622 16,-1 c 0,-3.0491 2,-8 2,-8 0,0 2.5409,0 5,0 2,-4 5,-12.00002 7,-12.00002 0,0 1,-4 3,-4 2.6314,0 16.99998,9.00002 16.99998,9.00002 l -10.99998,16 c 0,0 5.41738,-2.8351 10.99998,-4 1.988,-0.4148 -0.2344,-4.7065 2,-5 1.929,-0.2534 4,-1 5,-1 1,0 2.0324,-13.24872 4,-11.00002 7,8.00002 21.4047,17.28082 25.000002,21.00002 l -12.000002,-17.00002 -3,4.00002 -9,-13.00002 -11,7 -10.99998,-8 -3,2 -5,-3 -4,6 -5,-2 -12,16.00002 -3.3749,-0.6251 -7.6251,8.6251"
+                  fill="{{COLOR}}"
+                  stroke="none"
+                  marker="none"
+                  visibility="visible"
+                  display="inline"
+                  overflow="visible"
+                ></path>
+              </g>
+            </g>
+          </svg>
+          <span>
+            <h1>AR-</h1>
+            <h2>SHOP</h2>
+          </span>
+        </div>
+        <div class="nav_section-menu">
+          <ul>
+            <li><a>Home</a></li>
+            <li><a>About Products</a></li>
+            <li><a>Ingredients</a></li>
+            <li><a>Contact</a></li>
+            <li><a>Blog</a></li>
+          </ul>
+        </div>
+        <div class="nav_section-search">
+          <p>search:</p>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="header_section">
+        <div class="header_section-content">
+          <div class="header_section-img"></div>
+          <span>
+            <h3>BUILD PLAYLISTS & LISTEN WITH FRIENDS.</h3>
+            <h2>CLEARARANCE SALE</h2>
+            <h2>OFF TO 70%</h2>
+            <p><i>Spring Collection 2022</i></p>
+            <button>
+              <p>SIGNUP NOW</p>
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <script>
+      window.addEventListener("scroll", function () {
+        const parallax = document.querySelector(".header_section-img");
+        let scrollPosition = window.pageYOffset;
+        parallax.style.transform = "translateY(" + scrollPosition * 0.2 + "px)";
+      });
+    </script>
+  </body>
+</html>
