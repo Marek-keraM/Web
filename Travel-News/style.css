@@ -1,0 +1,420 @@
+:root{
+    --clr-neutral-1: rgb(255, 255, 255);
+    --clr-neutral-2: rgb(165, 122, 98);
+    --clr-neutral-3: rgb(185, 161, 136);
+    --clr-neutral-4: rgb(30, 30, 29);
+    --clr-neutral-5: rgb(0, 0, 0);
+}
+::-webkit-scrollbar{
+    width: 1rem;
+}
+::-webkit-scrollbar-track{
+    background: rgb(185, 161, 136);
+}
+::-webkit-scrollbar-thumb{
+    background-color:rgb(165, 122, 98);
+}
+*{
+    margin: 0px;    margin: 0px;
+    line-height: 1.5;
+}
+*,*::after,*::before{box-sizing: border-box;}
+body{
+    width: 100%;    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+    background: var(--clr-neutral-4);
+}
+a{
+    text-decoration: none;
+    color: var(--clr-neutral-1);
+}
+nav{
+    display: flex;
+    justify-content: space-between; align-items: center;
+    position: relative;
+    top: 0;     left: 0;
+    width: 100vw;    height: 8em;
+    border-bottom: 4px solid white;
+    color: var(--clr-neutral-1);
+    font-family: 'Lato', sans-serif;
+    background: rgba(140, 148, 146, 0.5);
+}
+nav span{
+    width: 100%;    height: 100%;
+    display: flex;
+    justify-content: center;    align-items: center;
+    font-size: 2.8rem;
+}
+nav ul{
+    width: 100%;    height: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;  align-items: center;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+#First{
+    width: 100%;    min-width: 100vw;
+    height: 100%;   min-height: 100vh;
+    background-image: url(/Travel-News/img/header.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+header{
+    display: flex;  flex-direction: column;
+    justify-content: center;
+    width: 80vw;    height: auto;
+    position: absolute;
+    padding: 48px 0 48px 64px;
+    bottom: 6rem;   left: 12rem;
+    color: var(--clr-neutral-1);
+    font-family: 'Lato', sans-serif;
+    border-left: 12px solid var(--clr-neutral-2);
+}
+header::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 26rem;   height: 8px;
+    background: var(--clr-neutral-2);
+}
+header::after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 26rem;   height: 8px;
+    background: var(--clr-neutral-2);
+}
+header h3{
+    width: max-content;
+    font-size: 1rem;
+    padding: 0.25rem 2rem 0.25rem 1rem;
+    background: rgba(165, 122, 98, 0.5);
+}
+header h1{
+    font-size: 3.5rem;
+}
+header p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+header a{
+    width: max-content;
+    position: relative;
+}
+header a::after{
+    content: "";
+    position: absolute;
+    bottom: -4px;  left: 0;
+    width: 100%; height: 4px;
+    background: var(--clr-neutral-2);
+}
+#Second{
+    width: 100%;    min-width: 100vw;
+    height: 100%;   min-height: 100vh;
+}
+[class^="Second"]{
+    width: 100%;    height: 75vh;
+}
+.Second-1{
+    background: linear-gradient(
+        to bottom,
+        rgb(30, 30, 29),
+        rgb(0, 0, 0)
+    );
+    display: flex;
+    justify-content: center;    align-items: center;
+    color: var(--clr-neutral-1);
+    font-family: 'Lato', sans-serif;
+}
+.Sec-1-content{
+    display: flex;
+    padding: 4rem 0rem;
+}
+.Sec-1-content-Padd{
+    width: 100%;    height: auto;
+    position: relative;
+    margin: 1rem 2rem 1rem 12rem;
+    padding:2rem 2rem;
+    border-right: 8px solid var(--clr-neutral-2);
+}
+.Sec-1-content-Padd::before{
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 24rem;   height: 8px;
+    background: var(--clr-neutral-2);
+}
+.Sec-1-content-Padd::after{
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 24rem;   height: 8px;
+    background: var(--clr-neutral-2);
+}
+.Sec-1-content-Padd-cont h1{
+    font-size: 3rem;
+}
+.Sec-1-content-Padd-cont p{
+    padding: 1.5rem 0;
+    font-size: 1.2rem;
+}
+.Second-2{
+    background-image: url(/Travel-News/img/section2.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;    align-items: center;
+    color: var(--clr-neutral-1);
+}
+.Sec-1-content,
+.Sec-2-content{
+    width: 80vw;    height: 100%;
+    position: relative;
+}
+.Sec-2-content span{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    font-size: 2.5rem;
+    font-family: 'Lato', sans-serif;
+    margin: 2.5rem 0 0 0;
+    padding: 0 0 1rem 1.5rem;
+    border-left: 8px solid var(--clr-neutral-2);
+}
+.Sec-2-content span::after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 26rem;   height: 8px;
+    background: var(--clr-neutral-2);
+}
+.Sec-2-content p{
+    width: 50%;
+    margin: 2.5rem 0rem;
+    font-size: 1.2rem;
+}
+.Sec-2-content a{
+    width: max-content;
+    position: relative;
+}
+.Sec-2-content a::after{
+    content: "";
+    position: absolute;
+    bottom: -4px;  left: 0;
+    width: 100%; height: 4px;
+    background: var(--clr-neutral-2);
+}
+.Sec-2-content i{
+    position: absolute;
+    right: 0;
+}
+#Third{
+    width: 100%;    min-width: 100vw;
+    height: 100%;   min-height: 100vh;
+    background: var(--clr-neutral-4);
+    display: flex;
+    justify-content: center;    align-items: center;
+}
+.Third-1{
+    width: 80vw;    height: 100vh;
+    display: flex;  flex-direction: column;
+    justify-content: start; align-items: center;
+    padding: 3rem 0 4rem 0;
+    font-family: 'Lato', sans-serif;
+}
+.Third-1 h1{
+    font-size: 3rem;
+    color: var(--clr-neutral-2);
+}
+.Cards{
+    width: 100%;    height: 14rem;
+    display: flex;
+    justify-content: space-evenly;    align-items: center;
+    margin: 1.5rem 0 0 0;
+}
+.card{
+    width: 14rem; height: 100%;
+    display: flex;  flex-direction: column;
+    justify-content: center;    align-items: center;
+    border: 1px solid var(--clr-neutral-3);
+    box-shadow: 0 0 10px lightslategray;
+}
+.card h2{
+    font-size: 4rem;
+    color: var(--clr-neutral-2);
+}
+.card p{
+    font-size: 0.9rem;
+    color: var(--clr-neutral-1);
+}
+.Third-content{
+    width: 100%;    max-height: 620px;
+    display: flex;
+    justify-content: center;    align-items: center;
+    padding: 6rem 0 0 0 ;
+}
+.Third-content-1{
+    width: 100%;    height: 100%;
+    position: relative;
+    padding: 5rem 0 0 3rem;
+    color: var(--clr-neutral-1);
+}
+.Third-content-1::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 26rem;   height: 8px;
+    background: var(--clr-neutral-2);
+}
+.Third-content-1::after{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 8px;   height: 16rem;
+    background: var(--clr-neutral-2);
+}
+.Third-content-1 h1{
+    color: var(--clr-neutral-1);
+}
+.Third-content-1 p{
+    padding: 1rem 0;
+}
+.Third-content-2{
+    width: 100%;    height: 100%;
+    padding: 0 2rem 2rem 0;
+    display: grid;
+    position: relative;
+    margin-left: 3rem;
+    grid-template-columns: repeat(12,auto);
+    grid-template-rows: repeat(12,auto);
+}
+.img1{
+    grid-column: 4/13;
+    grid-row: 3/13;
+    width: 100%;    height: 100%;
+    background: url(/Travel-News/img/1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img2{
+    grid-column: 1/10;
+    grid-row: 1/11;
+    width: 100%;    height: 100%;
+    background: url(/Travel-News/img/2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.Third-content-2::after{
+    content: "";
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 26rem;   height: 8px;
+    background: var(--clr-neutral-2);
+}
+.Third-content-2::before{
+    content: "";
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 8px;   height: 16rem;
+    background: var(--clr-neutral-2);
+}
+#Fourth{
+    width: 100%;    min-width: 100vw;
+    height: 100%;   min-height: 100vh;
+    position: relative;
+}
+.Fourth-content-img{
+    width: 100%;    height: 80vh;
+    background-image: url(/Travel-News/img/footer.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.Fourth-grad1{
+    width: 100%;    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(30, 30, 29,0.3),
+        rgba(0, 0, 0,0.5)
+    );
+}
+.Fourth-content{
+    width: 100%;    height: 100%;
+    display: flex;
+    justify-content: center;    align-items: center;
+    padding: 3rem 10vw;
+}
+.Fourth-content-Padd{
+    width: 100%;    height: 100%;
+    position: relative;
+}
+.Fourth-content-Padd::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 8px;   height: 12rem;
+    background: var(--clr-neutral-2);
+}
+.Fourth-content-Padd::after{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 12rem;   height: 8px;
+    background: var(--clr-neutral-2);
+}
+.Fourth-content-Padd2{
+    width: 100%;    height: 100%;
+    position: relative;
+}
+.Fourth-content-Padd2::before{
+    content: "";
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 8px;   height: 12rem;
+    background: var(--clr-neutral-2);
+}
+.Fourth-content-Padd2:after{
+    content: "";
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 12rem;   height: 8px;
+    background: var(--clr-neutral-2);
+}
+.Fourth-inuts{
+    width: 100%;    height: 100%;
+    display: flex;  flex-direction: column;
+    justify-content: center;    align-items: center;
+}
+.Fourth-inuts h1{
+    font-size: 4rem;
+    padding: 0 0 2rem 0;
+    word-spacing:0.5rem;
+    color: var(--clr-neutral-1);
+    font-family: 'Lato', sans-serif;
+}
+input{
+    width: 32rem;   height:2.5rem;
+    outline: none;
+    margin: 0.75rem 0;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+footer{
+    width: 100%;    min-height: 20vh;   height: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;    align-items: center;
+    color: var(--clr-neutral-1);
+    font-family: 'Lato', sans-serif;
+}
+footer div{
+    width: 100%;    height: 100%;
+    display: flex;  flex-direction: column;
+    justify-content: center;    align-items: center;
+}
