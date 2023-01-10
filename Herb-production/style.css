@@ -1,0 +1,276 @@
+:root {
+  --color-grey: #c4c4c4;
+  --color-white: #feffff;
+  --color-black: #000000;
+  --color-main: #7f994f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
+  /*height: 100%;*/
+  min-width: 390px;
+  /*min-height: 844px;*/
+  position: relative;
+  overflow-x: hidden;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.prva,
+.druha {
+  min-width: 100%;
+  width: 100vw;
+  min-height: 844px;
+  height: 100vh;
+  /*max-height: 1375px;*/
+}
+nav {
+  width: 100%;
+  height: 5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(32, 32, 32, 0.719);
+  display: inline-flex;
+  align-items: center;
+}
+.title-img {
+  display: inline-flex;
+  justify-content: center;
+  color: var(--color-main);
+  font-weight: bolder;
+  font-size: 2.125rem;
+  flex: 2.5;
+}
+nav ul {
+  flex: 4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul > li {
+  padding: 0 1.8rem;
+  list-style-type: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+}
+header {
+  width: 100%;
+  height: 100%;
+  background-image: url("/Layouts/Herb-production/img/main.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header-fade {
+  width: 100%;
+  height: 100%;
+  background-color: #00000067;
+  position: relative;
+}
+aside {
+  color: var(--color-white);
+  font-size: 1.125rem;
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translate(10%, -50%) rotate(-90deg);
+}
+aside :not(p) {
+  font-size: 1.75rem;
+}
+aside i:first-of-type,
+aside i:last-of-type {
+  padding: 2rem 1.5rem;
+}
+aside i {
+  padding: 1.5rem;
+  transform: rotate(90deg);
+}
+aside div {
+  display: inline-flex;
+  align-items: center;
+}
+.aside-line {
+  width: 230px;
+  height: 2px;
+  background: white;
+}
+.header-content {
+  position: absolute;
+  top: 55%;
+  left: 20%;
+  transform: translate(-20%, -55%);
+  width: clamp(280px, 90%, 650px);
+  height: max-content;
+}
+.header-content span {
+  width: 100%;
+  height: 100%;
+}
+.header-content h1 {
+  font-size: 5.25rem;
+  color: white;
+}
+p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: rgba(226, 226, 226, 0.842);
+  padding: 2rem 0 2.5rem;
+}
+button {
+  width: max-content;
+  padding: 1rem 4rem;
+  border-radius: 40px;
+  font-weight: medium;
+  font-size: 1.125rem;
+  outline: none;
+  border: 3px solid rgba(255, 255, 255, 0.199);
+  color: var(--color-white);
+  background-color: var(--color-main);
+}
+/*DRUHA CAST / SEKCIA*/
+.druha-content {
+  width: 100%;
+  height: 100%;
+}
+.druha-content_padd {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+.druha-content_container-one {
+  width: 100%;
+  height: 100%;
+  margin-top: 10em;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.wrapper {
+  width: clamp(280px, 80%, 550px);
+  height: max-content;
+  font-size: 2.5rem;
+  position: relative;
+  text-shadow: 2px 2px 1px white;
+}
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: -4em;
+  right: -150px;
+  width: 150px;
+  height: 9em;
+  background-color: var(--color-main);
+  z-index: -2;
+}
+.wrapper p {
+  color: rgb(104, 104, 104);
+  z-index: 5;
+  text-shadow: 2px 2px 1px white;
+}
+.wrapper-img {
+  width: auto;
+  position: absolute;
+  left: 35%;
+  z-index: -1;
+}
+.wrapper-img img {
+  width: 150%;
+  padding-left: 5rem;
+}
+@media screen and (max-width: 1350px) {
+  .title-img {
+    justify-content: flex-start;
+    padding-left: 10%;
+  }
+  nav ul {
+    display: none;
+  }
+}
+@media screen and (max-width: 1190px) {
+  .title-img {
+    padding-left: 8%;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 949px) {
+  aside {
+    display: none;
+  }
+  .header-content {
+    top: 60%;
+    left: 30%;
+    transform: translate(-30%, -60%);
+    width: clamp(300px, 80%, 800px);
+  }
+  .header-content span > h1:first-of-type {
+    font-size: 5.8rem;
+  }
+  .header-content span > h1 {
+    font-size: 4.25rem;
+  }
+  .title-img {
+    padding-left: 5%;
+    font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  aside {
+    display: none;
+  }
+  .header-content {
+    top: 60%;
+    left: 25%;
+    transform: translate(-25%, -60%);
+    width: clamp(300px, 75%, 650px);
+  }
+  .header-content span > h1:first-of-type {
+    font-size: 5.8rem;
+  }
+  .header-content span > h1 {
+    font-size: 4.25rem;
+  }
+  .title-img {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  aside {
+    display: none;
+  }
+  .header-content {
+    top: 60%;
+    left: 30%;
+    transform: translate(-30%, -60%);
+    width: clamp(280px, 80%, 450px);
+  }
+  .header-content span > h1:first-of-type {
+    font-size: 4rem;
+  }
+  .header-content span > h1 {
+    font-size: 3rem;
+  }
+  .title-img {
+    font-size: 1.25rem;
+  }
+  /*DRUHA CAST*/
+}
